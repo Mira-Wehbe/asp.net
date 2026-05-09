@@ -16,5 +16,10 @@ namespace Taxi_Project
         protected void btnReserve_Click(object sender, EventArgs e)
         {
         }
+
+        protected void btnCalculate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -75,6 +75,16 @@
         }
         .btn-register:hover { background: #ffd000; }
 
+        .btn-mytrips {
+            height: 40px; padding: 0 20px;
+            background: transparent; border: 1.5px solid rgba(255,255,255,0.12);
+            border-radius: 10px; color: #aaa;
+            font-size: 13px; font-weight: 600; cursor: pointer;
+            text-decoration: none; display: flex; align-items: center; gap: 6px;
+            transition: all .2s;
+        }
+        .btn-mytrips:hover { border-color: rgba(245,195,0,0.4); color: #F5C300; }
+
         /* HERO LOGO AREA */
         .hero {
             position: relative; z-index: 10;
@@ -118,14 +128,14 @@
             font-size: 52px; letter-spacing: -1px; margin-top: 4px;
         }
 
-        /* CAROUSEL — reference style */
+        /* CAROUSEL */
         .carousel-section {
             position: relative; z-index: 10;
             padding: 20px 0 60px;
             display: flex; align-items: center; justify-content: center;
         }
 
-        /* Side arrow buttons — like the reference photo */
+        /* Side arrow buttons */
         .arrow-btn {
             flex-shrink: 0;
             width: 60px; height: 60px; border-radius: 14px;
@@ -148,7 +158,7 @@
             transition: transform .5s cubic-bezier(.4,0,.2,1);
         }
 
-        /* Each car card — open style like reference (no box border) */
+        /* Each car card */
         .car-card {
             flex: 0 0 calc(50% - 16px);
             display: flex; flex-direction: column;
@@ -172,20 +182,17 @@
         }
         .car-card:hover .car-img-wrap img { transform: scale(1.04) translateY(-6px); }
 
-        /* Car name — yellow, bold, like reference */
         .car-name {
             font-family: 'Inter', sans-serif;
             font-size: 22px; font-weight: 700;
             color: #F5C300; margin-bottom: 14px;
         }
 
-        /* Simple info block — exactly like reference photo */
         .car-info {
             font-size: 14px; line-height: 1.9; color: #aaa;
         }
         .car-info strong { color: #fff; font-weight: 600; }
 
-        /* Book button — appears on this card */
         .car-book-btn {
             margin-top: 22px;
             height: 46px; padding: 0 32px;
@@ -229,8 +236,8 @@
         }
     </style>
 </head>
-
 <body>
+    <form id="form1" runat="server">
 
 <div class="bg-grid"></div>
 <div class="bg-glow"></div>
@@ -243,8 +250,21 @@
         <span>TAXI</span>
     </div>
     <div class="nav-right">
-        <a href="Login.aspx" class="btn-login">Login</a>
-        <a href="Register.aspx" class="btn-register">Register</a>
+        <asp:Button ID="btnMyTrips"
+            runat="server"
+            Text="🧾 My Trips"
+            CssClass="btn-mytrips"
+            OnClick="btnMyTrips_Click" />
+        <asp:Button ID="btnLogin"
+            runat="server"
+            Text="Login"
+            CssClass="btn-login"
+            OnClick="btnLogin_Click" />
+        <asp:Button ID="btnRegister"
+            runat="server"
+            Text="Register"
+            CssClass="btn-register"
+            OnClick="btnRegister_Click" />
     </div>
 </nav>
 
@@ -269,8 +289,8 @@
 <!-- CAROUSEL -->
 <div class="carousel-section">
 
-    <!-- LEFT ARROW — sits beside cards like reference -->
-    <button class="arrow-btn" id="btnPrev" onclick="slide(-1)">←</button>
+    <!-- FIX #2: type="button" prevents form submission -->
+    <button class="arrow-btn" type="button" id="btnPrev" onclick="slide(-1)">←</button>
 
     <div class="cars-wrapper">
         <div class="cars-track" id="carsTrack">
@@ -286,7 +306,11 @@
                     Toyota Corolla, Kia Cerato<br>
                     <strong>Seats:</strong> 4 Passengers
                 </div>
-                <a href="Reserve.aspx?class=standard" class="car-book-btn">Book Standard →</a>
+                <asp:Button ID="btnStandard"
+                    runat="server"
+                    Text="Book Standard →"
+                    CssClass="car-book-btn"
+                    OnClick="btnStandard_Click" />
             </div>
 
             <!-- BUSINESS -->
@@ -301,7 +325,11 @@
                     <strong>Seats:</strong> 4 Passengers<br>
                     <strong>Unbranded Cars</strong>
                 </div>
-                <a href="Reserve.aspx?class=business" class="car-book-btn">Book Business →</a>
+                <asp:Button ID="btnBusiness"
+                    runat="server"
+                    Text="Book Business →"
+                    CssClass="car-book-btn"
+                    OnClick="btnBusiness_Click" />
             </div>
 
             <!-- VAN -->
@@ -315,32 +343,34 @@
                     Toyota Hiace, Hyundai H1<br>
                     <strong>Seats:</strong> 7 Passengers
                 </div>
-                <a href="Reserve.aspx?class=van" class="car-book-btn">Book Van →</a>
+                <asp:Button ID="btnVan"
+                    runat="server"
+                    Text="Book Van →"
+                    CssClass="car-book-btn"
+                    OnClick="btnVan_Click" />
             </div>
-            <!-- DUPLICATE OF FIRST CARD -->
-<div class="car-card">
-    <div class="car-img-wrap">
-        <img src="images/img3.png" alt="Yalla Standard" />
-    </div>
 
-    <div class="car-name">Yalla Standard</div>
-
-    <div class="car-info">
-        <strong>Car Types:</strong> Hyundai Elantra 2024–2025,<br>
-        Toyota Corolla, Kia Cerato<br>
-        <strong>Seats:</strong> 4 Passengers
-    </div>
-
-    <a href="Reserve.aspx?class=standard" class="car-book-btn">
-        Book Standard →
-    </a>
-</div>
+            <!-- DUPLICATE OF FIRST CARD (for seamless forward loop) -->
+            <div class="car-card">
+                <div class="car-img-wrap">
+                    <img src="images/img3.png" alt="Yalla Standard" />
+                </div>
+                <div class="car-name">Yalla Standard</div>
+                <div class="car-info">
+                    <strong>Car Types:</strong> Hyundai Elantra 2024–2025,<br>
+                    Toyota Corolla, Kia Cerato<br>
+                    <strong>Seats:</strong> 4 Passengers
+                </div>
+                <a href="Reserve.aspx?class=standard" class="car-book-btn">
+                    Book Standard →
+                </a>
+            </div>
 
         </div>
     </div>
 
-    <!-- RIGHT ARROW -->
-    <button class="arrow-btn" id="btnNext" onclick="slide(1)">→</button>
+    <!-- FIX #2: type="button" prevents form submission -->
+    <button class="arrow-btn" type="button" id="btnNext" onclick="slide(1)">→</button>
 
 </div>
 
@@ -359,19 +389,14 @@
         <span>TAXI</span>
     </div>
     <p>© 2026 Yalla Taxi. All rights reserved.</p>
-    <div style="display:flex; gap:16px;">
-        <a href="Login.aspx">Login</a>
-        <a href="Register.aspx">Register</a>
-        <a href="History.aspx">My Trips</a>
-    </div>
 </footer>
 
 <script>
     var current = 0;
     var total = 3;
+    var isAnimating = false; // prevent double-clicks mid-animation
 
-    function updateCarousel(animated = true) {
-
+    function updateCarousel(animated) {
         var track = document.getElementById('carsTrack');
         var dots = document.getElementById('dots').querySelectorAll('.dot');
 
@@ -395,47 +420,50 @@
     }
 
     function slide(dir) {
+        if (isAnimating) return; // block during animation
+        isAnimating = true;
 
         current += dir;
-
         updateCarousel(true);
 
-        // LOOP FORWARD
+        // FIX #1: LOOP FORWARD — wait for animation, then jump silently
         if (current === total) {
-
             setTimeout(function () {
-
                 current = 0;
-
                 updateCarousel(false);
-
+                isAnimating = false;
             }, 500);
+            return;
         }
 
-        // LOOP BACKWARD
+        // FIX #1: LOOP BACKWARD — wait for animation, then jump silently
         if (current < 0) {
-
-            current = total - 1;
-
-            updateCarousel(false);
+            setTimeout(function () {
+                current = total - 1;
+                updateCarousel(false);
+                isAnimating = false;
+            }, 500);
+            return;
         }
+
+        setTimeout(function () { isAnimating = false; }, 500);
     }
 
     function goTo(idx) {
-
+        if (isAnimating) return;
         current = idx;
-
         updateCarousel(true);
     }
 
     window.addEventListener('resize', function () {
-
         updateCarousel(false);
     });
 
     updateCarousel(false);
 </script>
-
+    </form>
 </body>
 </html>
+
+
 

@@ -13,5 +13,35 @@ namespace Taxi_Project
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnStandard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnBusiness_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnVan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnMyTrips_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
