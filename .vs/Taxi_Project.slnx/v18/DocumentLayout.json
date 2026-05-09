@@ -1,0 +1,278 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\history.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\history.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|c:\\users\\miraw\\downloads\\taxi_project\\taxi_project\\reserve.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\reserve.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\reserve.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\reserve.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\admin\\aiinsights.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\admin\\aiinsights.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\admin\\calendar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\admin\\calendar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\miraw\\Downloads\\Taxi_Project\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\models\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|C:\\Users\\miraw\\Downloads\\Taxi_Project\\taxi_project\\models\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\models\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reserve.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Reserve.aspx.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\Reserve.aspx.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Reserve.aspx.cs",
+              "RelativeToolTip": "Taxi_Project\\Reserve.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T07:11:28.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Reserve.aspx",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Reserve.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\Reserve.aspx",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Reserve.aspx",
+              "RelativeToolTip": "Taxi_Project\\Reserve.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-08T21:47:52.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "History.aspx",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\History.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\History.aspx",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\History.aspx",
+              "RelativeToolTip": "Taxi_Project\\History.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-08T21:48:24.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.aspx",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Register.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\Register.aspx",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Register.aspx",
+              "RelativeToolTip": "Taxi_Project\\Register.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-08T21:47:26.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "login.aspx",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\login.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\login.aspx",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\login.aspx",
+              "RelativeToolTip": "Taxi_Project\\login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-08T20:14:46.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\login.aspx.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\login.aspx.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\login.aspx.cs",
+              "RelativeToolTip": "Taxi_Project\\login.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T20:15:57.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.aspx",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Admin\\Dashboard.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\Admin\\Dashboard.aspx",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Admin\\Dashboard.aspx",
+              "RelativeToolTip": "Taxi_Project\\Admin\\Dashboard.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-08T21:42:48.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Register.aspx.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\Register.aspx.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Register.aspx.cs",
+              "RelativeToolTip": "Taxi_Project\\Register.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T06:51:20.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AIInsights.aspx",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Admin\\AIInsights.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\Admin\\AIInsights.aspx",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Admin\\AIInsights.aspx",
+              "RelativeToolTip": "Taxi_Project\\Admin\\AIInsights.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-08T21:43:38.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Calendar.aspx",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Admin\\Calendar.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\Admin\\Calendar.aspx",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Admin\\Calendar.aspx",
+              "RelativeToolTip": "Taxi_Project\\Admin\\Calendar.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-08T21:43:17.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Driver.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Driver.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\Models\\Driver.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Driver.cs",
+              "RelativeToolTip": "Taxi_Project\\Models\\Driver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T20:07:26.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Feedback.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\Models\\Feedback.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Feedback.cs",
+              "RelativeToolTip": "Taxi_Project\\Models\\Feedback.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T20:07:54.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\Models\\Car.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Car.cs",
+              "RelativeToolTip": "Taxi_Project\\Models\\Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T20:07:02.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\User.cs",
+              "RelativeToolTip": "Taxi_Project\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T20:05:17.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Trip.cs",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Trip.cs",
+              "RelativeDocumentMoniker": "Taxi_Project\\Models\\Trip.cs",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\Taxi_Project\\Models\\Trip.cs",
+              "RelativeToolTip": "Taxi_Project\\Models\\Trip.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T20:06:35.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SQLQuery1.sql",
+              "DocumentMoniker": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\SQLQuery1.sql",
+              "RelativeDocumentMoniker": "SQLQuery1.sql",
+              "ToolTip": "C:\\Users\\miraw\\Downloads\\Taxi_Project\\SQLQuery1.sql",
+              "RelativeToolTip": "SQLQuery1.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-08T19:59:29.383Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

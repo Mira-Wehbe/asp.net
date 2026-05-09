@@ -1,0 +1,54 @@
+﻿DROP TABLE IF EXISTS Feedback;
+DROP TABLE IF EXISTS Trips;
+DROP TABLE IF EXISTS Drivers;
+DROP TABLE IF EXISTS Cars;
+DROP TABLE IF EXISTS Users;
+
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    FullName NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    Role NVARCHAR(10) NOT NULL CHECK (Role IN ('Admin', 'Client')),
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Cars (
+    CarID INT PRIMARY KEY IDENTITY(1,1),
+    PlateNumber NVARCHAR(20) NOT NULL UNIQUE,
+    Model NVARCHAR(50) NOT NULL,
+    IsActive BIT DEFAULT 1
+);
+
+CREATE TABLE Drivers (
+    DriverID INT PRIMARY KEY IDENTITY(1,1),
+    FullName NVARCHAR(100) NOT NULL,
+    Phone NVARCHAR(20),
+    CarID INT FOREIGN KEY REFERENCES Cars(CarID),
+    IsAvailable BIT DEFAULT 1
+);
+
+CREATE TABLE Trips (
+    TripID INT PRIMARY KEY IDENTITY(1,1),
+    ClientID INT FOREIGN KEY REFERENCES Users(UserID),
+    DriverID INT FOREIGN KEY REFERENCES Drivers(DriverID),
+    CarID INT FOREIGN KEY REFERENCES Cars(CarID),
+    PickupLocation NVARCHAR(255) NOT NULL,
+    DropoffLocation NVARCHAR(255) NOT NULL,
+    PickupTime DATETIME NOT NULL,
+    Status NVARCHAR(20) DEFAULT 'Pending' CHECK (Status IN ('Pending','Active','Completed','Cancelled')),
+    Price DECIMAL(10,2),
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Feedback (
+    FeedbackID INT PRIMARY KEY IDENTITY(1,1),
+    TripID INT FOREIGN KEY REFERENCES Trips(TripID),
+    ClientID INT FOREIGN KEY REFERENCES Users(UserID),
+    Rating INT CHECK (Rating BETWEEN 1 AND 5),
+    Comment NVARCHAR(500),
+    SubmittedAt DATETIME DEFAULT GETDATE()
+);
+
+INSERT INTO Users (FullName, Email, PasswordHash, Role)
+VALUES ('Admin', 'admin@taxi.com', 'admin123', 'Admin');
