@@ -11,15 +11,16 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { height: 100%; }
         body {
-            font-family: 'Inter', sans-serif;
-            background: #0f0f0f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
+    padding: 60px 20px;
+}
 
         .bg-text {
             position: fixed;
@@ -57,15 +58,16 @@
             z-index: 0;
         }
 
-        .card {
-            position: relative;
-            z-index: 10;
-            width: 420px;
-            background: #1a1a1a;
-            border-radius: 28px;
-            border: 1px solid rgba(245,195,0,0.15);
-            padding: 2.8rem;
-        }
+       .card {
+    position: relative;
+    z-index: 10;
+    width: 520px;
+    max-width: 95vw;
+    background: #1a1a1a;
+    border-radius: 28px;
+    border: 1px solid rgba(245,195,0,0.15);
+    padding: 2.2rem 2.4rem;
+}
 
         .logo-row {
             display: flex;
@@ -141,7 +143,7 @@
             font-weight: 700;
         }
 
-        .field { margin-bottom: 1.1rem; }
+        .field { margin-bottom: 0.9rem; }
 
         .field label {
             display: block;
@@ -181,10 +183,7 @@
         .input-wrap input:focus { border-color: #F5C300; }
 
         .row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0.6rem 0 1.6rem;
+            margin: 0.4rem 0 1.2rem;
         }
 
         .stay {
@@ -219,10 +218,7 @@
         .btn:hover { background: #ffd000; }
 
         .divider {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 1.4rem 0;
+            margin: 1rem 0;
         }
 
         .divider-line {

@@ -71,6 +71,7 @@
     <Content Include="Admin\Calendar.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="History.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="login.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Reserve.aspx" />
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="History.aspx.designer.cs">
       <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -141,6 +149,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

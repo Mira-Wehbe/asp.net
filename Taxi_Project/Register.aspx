@@ -9,15 +9,16 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { height: 100%; }
         body {
-            font-family: 'Inter', sans-serif;
-            background: #0f0f0f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
+    padding: 60px 20px;
+}
         .bg-text {
             position: fixed;
             font-family: 'Bebas Neue', sans-serif;
@@ -52,14 +53,15 @@
             z-index: 0;
         }
         .card {
-            position: relative;
-            z-index: 10;
-            width: 420px;
-            background: #1a1a1a;
-            border-radius: 28px;
-            border: 1px solid rgba(245,195,0,0.15);
-            padding: 2.8rem;
-        }
+    position: relative;
+    z-index: 10;
+    width: 520px;
+    max-width: 95vw;
+    background: #1a1a1a;
+    border-radius: 28px;
+    border: 1px solid rgba(245,195,0,0.15);
+    padding: 2.2rem 2.4rem;
+}
         .logo-row { display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; }
         .logo-badge { background: #F5C300; border-radius: 10px; padding: 6px 14px; display: flex; align-items: center; gap: 8px; }
         .logo-badge span { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: #111; letter-spacing: 2px; }
@@ -120,7 +122,7 @@
             <div class="input-wrap">
                 <span class="input-icon">👤</span>
                 <%-- ID: txtFullName | USE: txtFullName.Text --%>
-                <asp:TextBox ID="txtFullName" runat="server" placeholder="John Doe" />
+                <asp:TextBox ID="txtFullName" runat="server"/>
             </div>
         </div>
 
@@ -129,7 +131,7 @@
             <div class="input-wrap">
                 <span class="input-icon">✉</span>
                 <%-- ID: txtEmail | USE: txtEmail.Text --%>
-                <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" placeholder="you@example.com" />
+                <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" />
             </div>
         </div>
 
@@ -138,7 +140,7 @@
             <div class="input-wrap">
                 <span class="input-icon">🔒</span>
                 <%-- ID: txtPassword | USE: txtPassword.Text --%>
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="••••••••" />
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
             </div>
         </div>
 
@@ -147,7 +149,7 @@
             <div class="input-wrap">
                 <span class="input-icon">🔒</span>
                 <%-- ID: txtConfirmPassword | USE: txtConfirmPassword.Text --%>
-                <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" placeholder="••••••••" />
+                <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"/>
             </div>
         </div>
 
