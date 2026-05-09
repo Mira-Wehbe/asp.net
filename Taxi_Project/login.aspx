@@ -8,19 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body { height: 100%; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
         body {
-    font-family: 'Inter', sans-serif;
-    background: #0f0f0f;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    min-height: 100vh;
-    position: relative;
-    overflow-y: auto;
-    padding: 60px 20px;
-}
+            font-family: 'Inter', sans-serif;
+            background: #0f0f0f;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            overflow-y: auto;
+            padding: 60px 20px;
+        }
 
         .bg-text {
             position: fixed;
@@ -58,16 +66,16 @@
             z-index: 0;
         }
 
-       .card {
-    position: relative;
-    z-index: 10;
-    width: 520px;
-    max-width: 95vw;
-    background: #1a1a1a;
-    border-radius: 28px;
-    border: 1px solid rgba(245,195,0,0.15);
-    padding: 2.2rem 2.4rem;
-}
+        .card {
+            position: relative;
+            z-index: 10;
+            width: 520px;
+            max-width: 95vw;
+            background: #1a1a1a;
+            border-radius: 28px;
+            border: 1px solid rgba(245,195,0,0.15);
+            padding: 2.2rem 2.4rem;
+        }
 
         .logo-row {
             display: flex;
@@ -107,7 +115,9 @@
             margin-bottom: 4px;
         }
 
-        .heading span { color: #F5C300; }
+        .heading span {
+            color: #F5C300;
+        }
 
         .subheading {
             font-size: 14px;
@@ -123,6 +133,7 @@
             padding: 4px;
             margin-bottom: 2rem;
             border: 1px solid rgba(255,255,255,0.05);
+            gap: 4px;
         }
 
         .tab {
@@ -143,7 +154,9 @@
             font-weight: 700;
         }
 
-        .field { margin-bottom: 0.9rem; }
+        .field {
+            margin-bottom: 0.9rem;
+        }
 
         .field label {
             display: block;
@@ -155,7 +168,9 @@
             margin-bottom: 8px;
         }
 
-        .input-wrap { position: relative; }
+        .input-wrap {
+            position: relative;
+        }
 
         .input-icon {
             position: absolute;
@@ -164,6 +179,7 @@
             transform: translateY(-50%);
             font-size: 15px;
             color: #444;
+            z-index: 2;
         }
 
         .input-wrap input {
@@ -178,12 +194,19 @@
             outline: none;
         }
 
-        .input-wrap input::placeholder { color: #444; }
+        .input-wrap input::placeholder {
+            color: #444;
+        }
 
-        .input-wrap input:focus { border-color: #F5C300; }
+        .input-wrap input:focus {
+            border-color: #F5C300;
+        }
 
         .row {
             margin: 0.4rem 0 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .stay {
@@ -195,7 +218,9 @@
             cursor: pointer;
         }
 
-        .forgot {
+        .forgot-btn {
+            background: none;
+            border: none;
             font-size: 13px;
             color: #F5C300;
             font-weight: 500;
@@ -215,10 +240,15 @@
             letter-spacing: 0.5px;
         }
 
-        .btn:hover { background: #ffd000; }
+        .btn:hover {
+            background: #ffd000;
+        }
 
         .divider {
             margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .divider-line {
@@ -243,92 +273,178 @@
             font-weight: 600;
             text-decoration: none;
         }
+
+        .error-label {
+            color: #ff5b5b;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
 
-<div class="bg-text">YALLA</div>
-<div class="circle-glow"></div>
-<div class="grid"></div>
+    <div class="bg-text">YALLA</div>
+    <div class="circle-glow"></div>
+    <div class="grid"></div>
 
-<form id="form1" runat="server">
+    <form id="form1" runat="server">
 
-    <div class="card">
+        <div class="card">
 
-        <!-- LOGO -->
-        <div class="logo-row">
-            <div class="logo-badge">
-                <span>YALLA</span>
-                <div class="logo-sep"></div>
-                <span>TAXI</span>
+            <!-- LOGO -->
+            <div class="logo-row">
+                <div class="logo-badge">
+                    <span>YALLA</span>
+
+                    <div class="logo-sep"></div>
+
+                    <span>TAXI</span>
+                </div>
             </div>
-        </div>
 
-        <p class="heading">Welcome <span>back.</span></p>
-        <p class="subheading">Your next ride is one tap away</p>
+            <!-- HEADING -->
+            <p class="heading">
+                Welcome <span>back.</span>
+            </p>
 
-        <!-- TABS -->
-        <div class="tabs">
-            <button type="button" class="tab active" onclick="window.location='Login.aspx'">Sign in</button>
-            <button type="button" class="tab" onclick="window.location='Register.aspx'">Register</button>
-        </div>
+            <p class="subheading">
+                Your next ride is one tap away
+            </p>
 
-        <!-- ERROR -->
-        <asp:Label ID="lblError" runat="server" Visible="false" />
-        <!-- C# USE: lblError.Text / lblError.Visible -->
+            <!-- TABS -->
+            <div class="tabs">
 
-        <!-- EMAIL -->
-        <div class="field">
-            <label>Email</label>
-            <div class="input-wrap">
-                <span class="input-icon">✉</span>
+                <asp:Button
+                    ID="btnSignInTab"
+                    runat="server"
+                    Text="Sign in"
+                    CssClass="tab active"
+                    OnClick="btnSignInTab_Click" />
+                <!-- C# USE: btnSignInTab_Click -->
 
-                <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" />
-                <!-- C# USE: txtEmail.Text -->
+                <asp:Button
+                    ID="btnRegisterTab"
+                    runat="server"
+                    Text="Register"
+                    CssClass="tab"
+                    OnClick="btnRegisterTab_Click" />
+                <!-- C# USE: btnRegisterTab_Click -->
+
             </div>
-        </div>
 
-        <!-- PASSWORD -->
-        <div class="field">
-            <label>Password</label>
-            <div class="input-wrap">
-                <span class="input-icon">🔒</span>
+            <!-- ERROR LABEL -->
+            <asp:Label
+                ID="lblError"
+                runat="server"
+                Visible="false"
+                CssClass="error-label" />
+            <!-- C# USE: lblError.Text / lblError.Visible -->
 
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
-                <!-- C# USE: txtPassword.Text -->
+            <!-- EMAIL -->
+            <div class="field">
+
+                <label>Email</label>
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">✉</span>
+
+                    <asp:TextBox
+                        ID="txtPhone"
+                        runat="server"
+                        TextMode="SingleLine"
+                        placeholder="Enter your email" />
+                    <!-- C# USE: txtEmail.Text -->
+
+                </div>
+
             </div>
+
+            <!-- PASSWORD -->
+            <div class="field">
+
+                <label>Password</label>
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">🔒</span>
+
+                    <asp:TextBox
+                        ID="txtPassword"
+                        runat="server"
+                        TextMode="Password"
+                        placeholder="Enter your password" />
+                    <!-- C# USE: txtPassword.Text -->
+
+                </div>
+
+            </div>
+
+            <!-- OPTIONS -->
+            <div class="row">
+
+                <label class="stay">
+
+                    <asp:CheckBox
+                        ID="chkStaySignedIn"
+                        runat="server" />
+                    <!-- C# USE: chkStaySignedIn.Checked -->
+
+                    Stay signed in
+
+                </label>
+
+                <asp:Button
+                    ID="btnForgotPassword"
+                    runat="server"
+                    Text="Forgot password?"
+                    CssClass="forgot-btn"
+                    OnClick="btnForgotPassword_Click" />
+                <!-- C# USE: btnForgotPassword_Click -->
+
+            </div>
+
+            <!-- LOGIN BUTTON -->
+            <asp:Button
+                ID="btnLogin"
+                runat="server"
+                Text="Continue →"
+                CssClass="btn"
+                OnClick="btnLogin_Click" />
+            <!-- C# USE: btnLogin_Click -->
+
+            <!-- DIVIDER -->
+            <div class="divider">
+
+                <div class="divider-line"></div>
+
+                <span class="divider-text">or</span>
+
+                <div class="divider-line"></div>
+
+            </div>
+
+            <!-- REGISTER -->
+            <p class="register-link">
+
+                Don't have an account?
+
+                <asp:LinkButton
+                    ID="lnkRegister"
+                    runat="server"
+                    OnClick="lnkRegister_Click">
+                    Register now
+                </asp:LinkButton>
+                <!-- C# USE: lnkRegister_Click -->
+
+            </p>
+
         </div>
 
-        <!-- OPTIONS -->
-        <div class="row">
-            <label class="stay">
-                <input type="checkbox" />
-                Stay signed in
-            </label>
-
-            <span class="forgot">Forgot password?</span>
-        </div>
-
-        <!-- BUTTON -->
-        <asp:Button ID="btnLogin" runat="server" Text="Continue →" CssClass="btn" OnClick="btnLogin_Click" />
-        <!-- C# USE: btnLogin_Click -->
-
-        <!-- DIVIDER -->
-        <div class="divider">
-            <div class="divider-line"></div>
-            <span class="divider-text">or</span>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- REGISTER -->
-        <p class="register-link">
-            Don't have an account? <a href="Register.aspx">Register now</a>
-        </p>
-
-    </div>
-
-</form>
+    </form>
 
 </body>
 </html>
