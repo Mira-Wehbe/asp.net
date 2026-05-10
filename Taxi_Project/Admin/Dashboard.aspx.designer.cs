@@ -60,120 +60,66 @@ namespace Taxi_Project.Admin
         protected global::System.Web.UI.WebControls.Button btnTripsToday;
 
         /// <summary>
-        /// lblProfitToday control.
+        /// lblNewBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProfitToday;
+        protected global::System.Web.UI.WebControls.Label lblNewBookings;
 
         /// <summary>
-        /// btnProfitToday control.
+        /// btnNewBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProfitToday;
+        protected global::System.Web.UI.WebControls.Button btnNewBookings;
 
         /// <summary>
-        /// lblActiveCars control.
+        /// lblTotalCars control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblActiveCars;
+        protected global::System.Web.UI.WebControls.Label lblTotalCars;
 
         /// <summary>
-        /// btnActiveCars control.
+        /// btnTotalCars control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActiveCars;
+        protected global::System.Web.UI.WebControls.Button btnTotalCars;
 
         /// <summary>
-        /// lblDriversAvailable control.
+        /// lblDriversRegistered control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDriversAvailable;
+        protected global::System.Web.UI.WebControls.Label lblDriversRegistered;
 
         /// <summary>
-        /// btnDriversAvailable control.
+        /// btnDriversRegistered control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDriversAvailable;
+        protected global::System.Web.UI.WebControls.Button btnDriversRegistered;
 
         /// <summary>
-        /// btnProfitDay control.
+        /// pnlBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProfitDay;
-
-        /// <summary>
-        /// btnProfitWeek control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProfitWeek;
-
-        /// <summary>
-        /// btnProfitMonth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProfitMonth;
-
-        /// <summary>
-        /// lblProfit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProfit;
-
-        /// <summary>
-        /// lblProfitLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProfitLabel;
-
-        /// <summary>
-        /// pnlCars control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlCars;
-
-        /// <summary>
-        /// pnlDrivers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlDrivers;
+        protected global::System.Web.UI.WebControls.Panel pnlBookings;
     }
 }

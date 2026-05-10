@@ -418,7 +418,7 @@
         current += dir;
         updateCarousel(true);
 
-        // FIX #1: LOOP FORWARD — wait for animation, then jump silently
+        // LOOP FORWARD — wait for animation, then jump silently
         if (current === total) {
             setTimeout(function () {
                 current = 0;
@@ -428,7 +428,7 @@
             return;
         }
 
-        // FIX #1: LOOP BACKWARD — wait for animation, then jump silently
+        // LOOP BACKWARD — wait for animation, then jump silently
         if (current < 0) {
             setTimeout(function () {
                 current = total - 1;

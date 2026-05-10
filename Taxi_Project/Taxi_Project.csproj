@@ -68,11 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AIInsights.aspx" />
+    <Content Include="Admin\Bookings.aspx" />
     <Content Include="Admin\Calendar.aspx" />
     <Content Include="Admin\Cars.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\Drivers.aspx" />
-    <Content Include="Admin\Profit.aspx" />
     <Content Include="History.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="login.aspx" />
@@ -87,6 +87,13 @@
     </Compile>
     <Compile Include="Admin\AIInsights.aspx.designer.cs">
       <DependentUpon>AIInsights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bookings.aspx.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bookings.aspx.designer.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
@@ -115,13 +122,6 @@
     </Compile>
     <Compile Include="Admin\Drivers.aspx.designer.cs">
       <DependentUpon>Drivers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Profit.aspx.cs">
-      <DependentUpon>Profit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Profit.aspx.designer.cs">
-      <DependentUpon>Profit.aspx</DependentUpon>
     </Compile>
     <Compile Include="History.aspx.cs">
       <DependentUpon>History.aspx</DependentUpon>

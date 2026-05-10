@@ -82,7 +82,6 @@
             transition: border-color .2s, transform .2s;
         }
         .driver-card:hover { border-color: rgba(245,195,0,0.25); transform: translateY(-2px); }
-
         .driver-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
         .driver-avatar {
             width: 48px; height: 48px; background: #111;
@@ -168,8 +167,8 @@
 
         /* ── MESSAGES ────────────────────────────────── */
         .msg-box     { border-radius: 10px; padding: 10px 14px; font-size: 13px; display: block; }
-        .msg-error   { background: #1e1010; border: 1px solid rgba(255,80,80,0.3);   color: #ff6b6b; }
-        .msg-success { background: #0f1e10; border: 1px solid rgba(34,197,94,0.3);   color: #4ade80; }
+        .msg-error   { background: #1e1010; border: 1px solid rgba(255,80,80,0.3); color: #ff6b6b; }
+        .msg-success { background: #0f1e10; border: 1px solid rgba(34,197,94,0.3); color: #4ade80; }
 
         /* ── EMPTY STATE ─────────────────────────────── */
         .empty-state { grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; color: #333; }
@@ -180,7 +179,7 @@
 <body>
 <form id="form1" runat="server">
 
-    <!-- SIDEBAR -->
+    <!-- SIDEBAR — only Dashboard + AI Insights -->
     <div class="sidebar">
         <div class="logo-badge">
             <span>YALLA</span>
@@ -189,10 +188,7 @@
         </div>
         <div class="nav-label">Main Menu</div>
         <a href="Dashboard.aspx"  class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
-        <a href="Calendar.aspx"   class="nav-item"><span class="nav-icon">📅</span> Calendar</a>
         <a href="AIInsights.aspx" class="nav-item"><span class="nav-icon">🤖</span> AI Insights</a>
-        <a href="Cars.aspx"       class="nav-item"><span class="nav-icon">🚗</span> Cars</a>
-        <a href="Drivers.aspx"    class="nav-item active"><span class="nav-icon">👨‍✈️</span> Drivers</a>
         <div class="sidebar-bottom">
             <div class="admin-info">
                 <div class="admin-avatar">A</div>
@@ -244,7 +240,9 @@
     <!-- ADD / EDIT MODAL -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
-            <div class="modal-title"><asp:Label ID="lblModalTitle" runat="server" Text="Add New " /><span>Driver</span></div>
+            <div class="modal-title">
+                <asp:Label ID="lblModalTitle" runat="server" Text="Add New " /><span>Driver</span>
+            </div>
 
             <div class="modal-field">
                 <div class="modal-label">Full Name</div>
@@ -262,8 +260,8 @@
             </div>
 
             <div class="modal-actions">
-                <asp:Button ID="btnSaveDriver"   runat="server" Text="Save Driver" CssClass="btn-save"         OnClick="btnSaveDriver_Click" />
-                <asp:Button ID="btnCancelModal"  runat="server" Text="Cancel"      CssClass="btn-cancel-modal" OnClick="btnCancelModal_Click" CausesValidation="false" />
+                <asp:Button ID="btnSaveDriver"  runat="server" Text="Save Driver" CssClass="btn-save"         OnClick="btnSaveDriver_Click" />
+                <asp:Button ID="btnCancelModal" runat="server" Text="Cancel"      CssClass="btn-cancel-modal" OnClick="btnCancelModal_Click" CausesValidation="false" />
             </div>
         </div>
     </div>
@@ -272,8 +270,7 @@
 
 <script>
     window.onload = function () {
-        var flag = document.getElementById('<%= hdnModalOpen.ClientID %>').value;
-        if (flag === '1') {
+        if (document.getElementById('<%= hdnModalOpen.ClientID %>').value === '1') {
             document.getElementById('modalOverlay').classList.add('open');
         }
     };

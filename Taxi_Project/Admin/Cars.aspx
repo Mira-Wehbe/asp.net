@@ -39,27 +39,28 @@
         .btn-logout { width: 100%; height: 40px; background: transparent; border: 1px solid rgba(245,195,0,0.2); color: #F5C300; border-radius: 10px; font-size: 13px; cursor: pointer; font-family: 'Inter', sans-serif; }
 
         /* ── MAIN ────────────────────────────────────── */
-        .main { margin-left: 240px; flex: 1; padding: 2.5rem; min-height: 100vh; }
+        .main { margin-left: 240px; flex: 1; padding: 2.5rem; min-height: 100vh; overflow-y: auto; }
 
+        /* ── PAGE HEADER ─────────────────────────────── */
         .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
         .page-header-left h1 { font-size: 26px; font-weight: 700; }
         .page-header-left h1 span { color: #F5C300; }
         .page-header-left p { font-size: 14px; color: #555; margin-top: 4px; }
-
-        /* ── ADD CAR BUTTON ──────────────────────────── */
         .btn-add {
             height: 42px; padding: 0 20px;
             background: #F5C300; border: none; border-radius: 10px;
             color: #111; font-size: 13px; font-weight: 700;
-            font-family: 'Inter', sans-serif; cursor: pointer;
-            transition: background .2s;
+            font-family: 'Inter', sans-serif; cursor: pointer; transition: background .2s;
         }
         .btn-add:hover { background: #ffd500; }
 
+        /* ── MESSAGES ────────────────────────────────── */
+        .msg-box     { border-radius: 10px; padding: 10px 14px; font-size: 13px; display: block; margin-bottom: 1rem; }
+        .msg-error   { background: #1e1010; border: 1px solid rgba(255,80,80,0.3);  color: #ff6b6b; }
+        .msg-success { background: #0f1e10; border: 1px solid rgba(34,197,94,0.3);  color: #4ade80; }
+
         /* ── FILTER BAR ──────────────────────────────── */
-        .filter-bar {
-            display: flex; gap: 8px; margin-bottom: 1.5rem;
-        }
+        .filter-bar { display: flex; gap: 8px; margin-bottom: 1.5rem; }
         .filter-btn {
             height: 36px; padding: 0 16px;
             background: #1a1a1a; border: 1px solid rgba(255,255,255,0.07);
@@ -86,15 +87,15 @@
             transition: border-color .2s, transform .2s;
         }
         .car-card:hover { border-color: rgba(245,195,0,0.25); transform: translateY(-2px); }
-
         .car-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
         .car-icon { font-size: 32px; }
+
         .badge { padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: 600; }
-        .badge-active    { background: rgba(34,197,94,0.1);  color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
-        .badge-inactive  { background: rgba(255,80,80,0.1);  color: #f87171; border: 1px solid rgba(255,80,80,0.3); }
-        .badge-standard  { background: rgba(245,195,0,0.1);  color: #F5C300; border: 1px solid rgba(245,195,0,0.3); }
-        .badge-business  { background: rgba(59,130,246,0.1); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
-        .badge-van       { background: rgba(168,85,247,0.1); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
+        .badge-active   { background: rgba(34,197,94,0.1);   color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+        .badge-inactive { background: rgba(255,80,80,0.1);   color: #f87171; border: 1px solid rgba(255,80,80,0.3); }
+        .badge-standard { background: rgba(245,195,0,0.1);   color: #F5C300; border: 1px solid rgba(245,195,0,0.3); }
+        .badge-business { background: rgba(59,130,246,0.1);  color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        .badge-van      { background: rgba(168,85,247,0.1);  color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
 
         .car-model { font-size: 17px; font-weight: 700; color: #fff; }
         .car-plate { font-size: 12px; color: #555; margin-top: 2px; }
@@ -125,10 +126,10 @@
         }
         .btn-toggle:hover { border-color: rgba(255,80,80,0.3); color: #f87171; }
 
-        /* ── MODAL ───────────────────────────────────── */
+        /* ── MODAL OVERLAY ───────────────────────────── */
         .modal-overlay {
             display: none; position: fixed; inset: 0;
-            background: rgba(0,0,0,0.7); z-index: 500;
+            background: rgba(0,0,0,0.75); z-index: 500;
             align-items: center; justify-content: center;
         }
         .modal-overlay.open { display: flex; }
@@ -142,13 +143,15 @@
         .modal-field { display: flex; flex-direction: column; gap: 6px; }
         .modal-label { font-size: 11px; color: #444; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
         .modal-input {
-            height: 44px; background: #111; border: 1.5px solid rgba(255,255,255,0.07);
+            height: 44px; background: #111;
+            border: 1.5px solid rgba(255,255,255,0.07);
             border-radius: 10px; padding: 0 14px; color: #fff; font-size: 13px;
             font-family: 'Inter', sans-serif; outline: none; transition: border-color .2s;
         }
         .modal-input:focus { border-color: #F5C300; }
         .modal-select {
-            height: 44px; background: #111; border: 1.5px solid rgba(255,255,255,0.07);
+            height: 44px; background: #111;
+            border: 1.5px solid rgba(255,255,255,0.07);
             border-radius: 10px; padding: 0 14px; color: #fff; font-size: 13px;
             font-family: 'Inter', sans-serif; outline: none; appearance: none;
         }
@@ -168,16 +171,8 @@
         }
         .btn-cancel-modal:hover { border-color: rgba(255,80,80,0.3); color: #f87171; }
 
-        /* ── ERROR / SUCCESS ─────────────────────────── */
-        .msg-box { border-radius: 10px; padding: 10px 14px; font-size: 13px; display: block; }
-        .msg-error   { background: #1e1010; border: 1px solid rgba(255,80,80,0.3); color: #ff6b6b; }
-        .msg-success { background: #0f1e10; border: 1px solid rgba(34,197,94,0.3); color: #4ade80; }
-
         /* ── EMPTY STATE ─────────────────────────────── */
-        .empty-state {
-            grid-column: 1 / -1; text-align: center;
-            padding: 4rem 2rem; color: #333;
-        }
+        .empty-state { grid-column: 1/-1; text-align: center; padding: 4rem 2rem; color: #333; }
         .empty-state span { font-size: 48px; display: block; margin-bottom: 1rem; }
         .empty-state p { font-size: 14px; }
     </style>
@@ -194,10 +189,7 @@
         </div>
         <div class="nav-label">Main Menu</div>
         <a href="Dashboard.aspx"  class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
-        <a href="Calendar.aspx"   class="nav-item"><span class="nav-icon">📅</span> Calendar</a>
         <a href="AIInsights.aspx" class="nav-item"><span class="nav-icon">🤖</span> AI Insights</a>
-        <a href="Cars.aspx"       class="nav-item active"><span class="nav-icon">🚗</span> Cars</a>
-        <a href="Drivers.aspx"    class="nav-item"><span class="nav-icon">👨‍✈️</span> Drivers</a>
         <div class="sidebar-bottom">
             <div class="admin-info">
                 <div class="admin-avatar">A</div>
@@ -225,8 +217,8 @@
         </div>
 
         <!-- MESSAGES -->
-        <asp:Label ID="lblError"   runat="server" Visible="false" CssClass="msg-box msg-error"   style="margin-bottom:1rem;" />
-        <asp:Label ID="lblSuccess" runat="server" Visible="false" CssClass="msg-box msg-success" style="margin-bottom:1rem;" />
+        <asp:Label ID="lblError"   runat="server" Visible="false" CssClass="msg-box msg-error" />
+        <asp:Label ID="lblSuccess" runat="server" Visible="false" CssClass="msg-box msg-success" />
 
         <!-- FILTER BAR -->
         <div class="filter-bar">
@@ -241,16 +233,18 @@
             <asp:Panel ID="pnlCars" runat="server" />
         </div>
 
-        <!-- HIDDEN FIELDS for edit modal -->
-        <asp:HiddenField ID="hdnEditCarID"    runat="server" />
-        <asp:HiddenField ID="hdnModalOpen"    runat="server" Value="0" />
+        <!-- HIDDEN FIELDS -->
+        <asp:HiddenField ID="hdnEditCarID" runat="server" />
+        <asp:HiddenField ID="hdnModalOpen" runat="server" Value="0" />
 
     </div>
 
     <!-- ADD / EDIT MODAL -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
-            <div class="modal-title"><asp:Label ID="lblModalTitle" runat="server" Text="Add New " /><span>Car</span></div>
+            <div class="modal-title">
+                <asp:Label ID="lblModalTitle" runat="server" Text="Add New " /><span>Car</span>
+            </div>
 
             <div class="modal-field">
                 <div class="modal-label">Plate Number</div>
@@ -282,7 +276,7 @@
             </div>
 
             <div class="modal-actions">
-                <asp:Button ID="btnSaveCar"    runat="server" Text="Save Car"  CssClass="btn-save"         OnClick="btnSaveCar_Click" />
+                <asp:Button ID="btnSaveCar"     runat="server" Text="Save Car" CssClass="btn-save"         OnClick="btnSaveCar_Click" />
                 <asp:Button ID="btnCancelModal" runat="server" Text="Cancel"   CssClass="btn-cancel-modal" OnClick="btnCancelModal_Click" CausesValidation="false" />
             </div>
         </div>
@@ -291,10 +285,8 @@
 </form>
 
 <script>
-    // Open modal if C# flagged it
     window.onload = function () {
-        var flag = document.getElementById('<%= hdnModalOpen.ClientID %>').value;
-        if (flag === '1') {
+        if (document.getElementById('<%= hdnModalOpen.ClientID %>').value === '1') {
             document.getElementById('modalOverlay').classList.add('open');
         }
     };
