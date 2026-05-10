@@ -10,7 +10,7 @@
         html, body { height: 100%; }
         body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #fff; display: flex; }
 
-        /* SIDEBAR */
+        /* ── SIDEBAR ─────────────────────────────────── */
         .sidebar {
             width: 240px; background: #1a1a1a;
             border-right: 1px solid rgba(245,195,0,0.1);
@@ -26,7 +26,7 @@
             display: flex; align-items: center; gap: 10px;
             padding: 10px 12px; border-radius: 10px;
             font-size: 14px; color: #555; text-decoration: none;
-            font-weight: 500; margin-bottom: 4px;
+            font-weight: 500; margin-bottom: 4px; transition: all .2s;
         }
         .nav-item:hover { background: rgba(245,195,0,0.05); color: #fff; }
         .nav-item.active { background: rgba(245,195,0,0.1); color: #F5C300; }
@@ -36,107 +36,129 @@
         .admin-avatar { width: 36px; height: 36px; background: #F5C300; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #111; font-size: 14px; }
         .admin-name { font-size: 13px; color: #fff; font-weight: 500; }
         .admin-role { font-size: 11px; color: #555; }
-        .btn-logout { width: 100%; height: 40px; background: transparent; border: 1px solid rgba(245,195,0,0.2); color: #F5C300; border-radius: 10px; font-size: 13px; cursor: pointer; }
+        .btn-logout { width: 100%; height: 40px; background: transparent; border: 1px solid rgba(245,195,0,0.2); color: #F5C300; border-radius: 10px; font-size: 13px; cursor: pointer; font-family: 'Inter', sans-serif; }
 
-        /* MAIN */
-        .main { margin-left: 240px; flex: 1; padding: 2.5rem; min-height: 100vh; }
+        /* ── MAIN ────────────────────────────────────── */
+        .main { margin-left: 240px; flex: 1; padding: 2.5rem; min-height: 100vh; overflow-y: auto; }
         .page-header { margin-bottom: 2rem; }
         .page-header h1 { font-size: 26px; font-weight: 700; }
         .page-header h1 span { color: #F5C300; }
         .page-header p { font-size: 14px; color: #555; margin-top: 4px; }
 
-        /* STAT CARDS */
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+        /* ── STAT CARDS ──────────────────────────────── */
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
         .stat-card {
             background: #1a1a1a;
             border: 1px solid rgba(255,255,255,0.07);
             border-radius: 16px; padding: 1.5rem;
             display: flex; flex-direction: column; gap: 12px;
-            cursor: pointer; transition: border-color 0.2s;
+            transition: border-color 0.2s;
         }
         .stat-card:hover { border-color: rgba(245,195,0,0.3); }
         .stat-card.yellow { border-left: 3px solid #F5C300; }
-        .stat-card.blue { border-left: 3px solid #60a5fa; }
-        .stat-card.green { border-left: 3px solid #4ade80; }
-        .stat-card.red { border-left: 3px solid #f87171; }
-        .stat-icon { font-size: 22px; }
+        .stat-card.blue   { border-left: 3px solid #60a5fa; }
+        .stat-card.green  { border-left: 3px solid #4ade80; }
+        .stat-card.red    { border-left: 3px solid #f87171; }
+        .stat-icon  { font-size: 22px; }
         .stat-label { font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
         .stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: #fff; letter-spacing: 1px; line-height: 1; }
-        .stat-value span { color: #F5C300; }
-        .stat-sub { font-size: 12px; color: #555; }
+        .stat-btn {
+            background: none; border: none; color: #555;
+            font-size: 12px; font-family: 'Inter', sans-serif;
+            cursor: pointer; padding: 0; text-align: left;
+            transition: color .2s; width: 100%;
+        }
+        .stat-btn:hover { color: #F5C300; }
 
-        /* PROFIT TABS */
+        /* ── SECTION HEADER ──────────────────────────── */
         .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-        .section-title { font-size: 16px; font-weight: 600; color: #fff; }
-        .profit-tabs { display: flex; background: #111; border-radius: 10px; padding: 3px; }
-        .profit-tab { padding: 6px 16px; border-radius: 8px; font-size: 13px; color: #555; cursor: pointer; border: none; background: transparent; font-weight: 500; }
-        .profit-tab.active { background: #F5C300; color: #111; font-weight: 700; }
+        .section-title  { font-size: 16px; font-weight: 600; color: #fff; }
 
-        /* PROFIT CARD */
-        .profit-card {
-            background: #1a1a1a;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 16px; padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .profit-amount { font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: #F5C300; letter-spacing: 2px; }
-        .profit-sub { font-size: 13px; color: #555; margin-top: 4px; }
-
-        /* BOTTOM GRID */
-        .bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-        .list-card {
+        /* ── RECENT BOOKINGS ─────────────────────────── */
+        .bookings-card {
             background: #1a1a1a;
             border: 1px solid rgba(255,255,255,0.07);
             border-radius: 16px; padding: 1.5rem;
         }
-        .list-item {
-            display: flex; justify-content: space-between;
-            align-items: center; padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+        .search-wrap {
+            display: flex; align-items: center;
+            background: #111; border: 1.5px solid rgba(255,255,255,0.07);
+            border-radius: 10px; padding: 0 14px;
+            margin-bottom: 1.2rem; height: 42px; gap: 8px;
         }
-        .list-item:last-child { border-bottom: none; }
-        .list-item-left { display: flex; align-items: center; gap: 10px; }
-        .list-avatar { width: 36px; height: 36px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
-        .list-name { font-size: 14px; color: #fff; font-weight: 500; }
-        .list-sub { font-size: 12px; color: #555; }
+        .search-icon { font-size: 14px; color: #444; }
+        .search-input {
+            flex: 1; background: none; border: none; outline: none;
+            color: #fff; font-size: 13px; font-family: 'Inter', sans-serif;
+        }
+        .search-input::placeholder { color: #333; }
+        .btn-search {
+            height: 30px; padding: 0 14px;
+            background: #F5C300; border: none; border-radius: 7px;
+            color: #111; font-size: 12px; font-weight: 700;
+            font-family: 'Inter', sans-serif; cursor: pointer;
+        }
+
+        /* Booking item card */
+        .booking-item {
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px; padding: 1.2rem;
+            margin-bottom: 1rem; border-left: 3px solid #F5C300;
+        }
+        .booking-item:last-child { margin-bottom: 0; }
+        .booking-id { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .booking-client { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .client-avatar {
+            width: 36px; height: 36px; background: #F5C300;
+            border-radius: 10px; display: flex; align-items: center;
+            justify-content: center; font-weight: 700; color: #111; font-size: 14px;
+        }
+        .client-name { font-size: 14px; font-weight: 600; color: #fff; }
+        .client-car  { font-size: 12px; color: #555; }
+        .booking-route { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; padding-left: 4px; }
+        .route-row { display: flex; align-items: flex-start; gap: 10px; }
+        .route-dot-yellow { width: 10px; height: 10px; border-radius: 50%; background: #F5C300; flex-shrink: 0; margin-top: 3px; }
+        .route-dot-green  { width: 10px; height: 10px; border-radius: 50%; background: #4ade80; flex-shrink: 0; margin-top: 3px; }
+        .route-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+        .route-place { font-size: 13px; font-weight: 600; color: #fff; }
+        .booking-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .booking-price-wrap .booking-price-label { font-size: 10px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+        .booking-price { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: #F5C300; }
+
         .badge { padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: 600; }
-        .badge-active { background: rgba(34,197,94,0.1); color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
-        .badge-busy { background: rgba(245,195,0,0.1); color: #F5C300; border: 1px solid rgba(245,195,0,0.3); }
-        .badge-available { background: rgba(59,130,246,0.1); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        .badge-pending   { background: rgba(245,195,0,0.1);  color: #F5C300; border: 1px solid rgba(245,195,0,0.3); }
+        .badge-active    { background: rgba(34,197,94,0.1);  color: #4ade80; border: 1px solid rgba(34,197,94,0.3); }
+        .badge-completed { background: rgba(59,130,246,0.1); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        .badge-cancelled { background: rgba(255,80,80,0.1);  color: #f87171; border: 1px solid rgba(255,80,80,0.3); }
     </style>
 </head>
 <body>
-
 <form id="form1" runat="server">
 
-    <!-- SIDEBAR -->
+    <!-- SIDEBAR — only Dashboard + AI Insights -->
     <div class="sidebar">
         <div class="logo-badge">
             <span>YALLA</span>
             <div class="logo-sep"></div>
             <span>TAXI</span>
         </div>
-
         <div class="nav-label">Main Menu</div>
-        <a href="Dashboard.aspx" class="nav-item active"><span class="nav-icon">📊</span> Dashboard</a>
-        <a href="Calendar.aspx" class="nav-item"><span class="nav-icon">📅</span> Calendar</a>
+        <a href="Dashboard.aspx"  class="nav-item active"><span class="nav-icon">📊</span> Dashboard</a>
         <a href="AIInsights.aspx" class="nav-item"><span class="nav-icon">🤖</span> AI Insights</a>
-
         <div class="sidebar-bottom">
             <div class="admin-info">
                 <div class="admin-avatar">A</div>
                 <div>
-                    <%-- ID: lblAdminName | USE: lblAdminName.Text --%>
                     <asp:Label ID="lblAdminName" runat="server" CssClass="admin-name" Text="Admin" />
                     <div class="admin-role">Administrator</div>
                 </div>
             </div>
-            <%-- ID: btnLogout | USE: btnLogout_Click --%>
-            <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn-logout" OnClick="btnLogout_Click" />
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn-logout"
+                OnClick="btnLogout_Click" CausesValidation="false" />
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <div class="main">
 
         <div class="page-header">
@@ -147,116 +169,53 @@
         <!-- STAT CARDS -->
         <div class="stats-grid">
 
-            <div class="stat-card yellow" onclick="window.location='Calendar.aspx'">
+            <!-- TRIPS TODAY → Bookings.aspx -->
+            <div class="stat-card yellow">
                 <span class="stat-icon">🚕</span>
                 <div class="stat-label">Trips Today</div>
-                <%-- ID: lblTripsToday | USE: lblTripsToday.Text --%>
                 <div class="stat-value"><asp:Label ID="lblTripsToday" runat="server" Text="0" /></div>
-                <div class="stat-sub">Click to view →</div>
+                <asp:Button ID="btnTripsToday" runat="server" Text="Click to view →"
+                    CssClass="stat-btn" OnClick="btnTripsToday_Click" CausesValidation="false" />
             </div>
 
+            <!-- NEW BOOKINGS → Bookings.aspx -->
             <div class="stat-card blue">
-                <span class="stat-icon">💰</span>
-                <div class="stat-label">Profit Today</div>
-                <%-- ID: lblProfitToday | USE: lblProfitToday.Text --%>
-                <div class="stat-value">$<asp:Label ID="lblProfitToday" runat="server" Text="0" /></div>
-                <div class="stat-sub">Updated live</div>
+                <span class="stat-icon">📋</span>
+                <div class="stat-label">New Bookings</div>
+                <div class="stat-value"><asp:Label ID="lblNewBookings" runat="server" Text="0" /></div>
+                <asp:Button ID="btnNewBookings" runat="server" Text="More info →"
+                    CssClass="stat-btn" OnClick="btnNewBookings_Click" CausesValidation="false" />
             </div>
 
+            <!-- TOTAL CARS → Cars.aspx -->
             <div class="stat-card green">
                 <span class="stat-icon">🚗</span>
-                <div class="stat-label">Active Cars</div>
-                <%-- ID: lblActiveCars | USE: lblActiveCars.Text --%>
-                <div class="stat-value"><asp:Label ID="lblActiveCars" runat="server" Text="0" /></div>
-                <div class="stat-sub">Currently on road</div>
+                <div class="stat-label">Total Cars</div>
+                <div class="stat-value"><asp:Label ID="lblTotalCars" runat="server" Text="0" /></div>
+                <asp:Button ID="btnTotalCars" runat="server" Text="More info →"
+                    CssClass="stat-btn" OnClick="btnTotalCars_Click" CausesValidation="false" />
             </div>
 
+            <!-- DRIVERS REGISTERED → Drivers.aspx -->
             <div class="stat-card red">
                 <span class="stat-icon">👨‍✈️</span>
-                <div class="stat-label">Drivers Available</div>
-                <%-- ID: lblDriversAvailable | USE: lblDriversAvailable.Text --%>
-                <div class="stat-value"><asp:Label ID="lblDriversAvailable" runat="server" Text="0" /></div>
-                <div class="stat-sub">Ready to assign</div>
+                <div class="stat-label">Drivers Registered</div>
+                <div class="stat-value"><asp:Label ID="lblDriversRegistered" runat="server" Text="0" /></div>
+                <asp:Button ID="btnDriversRegistered" runat="server" Text="More info →"
+                    CssClass="stat-btn" OnClick="btnDriversRegistered_Click" CausesValidation="false" />
             </div>
 
         </div>
 
-        <!-- PROFIT SECTION -->
-        <div class="section-header">
-            <div class="section-title">💰 Total Profit</div>
-            <div class="profit-tabs">
-                <button type="button" class="profit-tab active" onclick="switchProfit('day', this)">Day</button>
-                <button type="button" class="profit-tab" onclick="switchProfit('week', this)">Week</button>
-                <button type="button" class="profit-tab" onclick="switchProfit('month', this)">Month</button>
-            </div>
-        </div>
+       
 
-        <div class="profit-card">
-            <%-- ID: lblProfit | USE: lblProfit.Text --%>
-            <div class="profit-amount">$<asp:Label ID="lblProfit" runat="server" Text="0.00" /></div>
-            <%-- ID: lblProfitLabel | USE: lblProfitLabel.Text --%>
-            <asp:Label ID="lblProfitLabel" runat="server" CssClass="profit-sub" Text="Total profit for today" />
-            <%-- ID: hdnProfitPeriod | USE: hdnProfitPeriod.Value --%>
-            <asp:HiddenField ID="hdnProfitPeriod" runat="server" Value="day" />
-        </div>
-
-        <!-- BOTTOM: CARS + DRIVERS -->
-        <div class="bottom-grid">
-
-            <!-- ACTIVE CARS -->
-            <div class="list-card">
-                <div class="section-header">
-                    <div class="section-title">🚗 Cars On Road</div>
-                </div>
-                <%-- ID: pnlCars | USE: pnlCars to add car items dynamically --%>
-                <asp:Panel ID="pnlCars" runat="server">
-                    <div class="list-item">
-                        <div class="list-item-left">
-                            <div class="list-avatar">🚗</div>
-                            <div>
-                                <div class="list-name">Sedan — ABC 123</div>
-                                <div class="list-sub">4 Seats · Standard</div>
-                            </div>
-                        </div>
-                        <span class="badge badge-active">Active</span>
-                    </div>
-                </asp:Panel>
-            </div>
-
-            <!-- AVAILABLE DRIVERS -->
-            <div class="list-card">
-                <div class="section-header">
-                    <div class="section-title">👨‍✈️ Available Drivers</div>
-                </div>
-                <%-- ID: pnlDrivers | USE: pnlDrivers to add driver items dynamically --%>
-                <asp:Panel ID="pnlDrivers" runat="server">
-                    <div class="list-item">
-                        <div class="list-item-left">
-                            <div class="list-avatar">👤</div>
-                            <div>
-                                <div class="list-name">John Doe</div>
-                                <div class="list-sub">Male · Sedan</div>
-                            </div>
-                        </div>
-                        <span class="badge badge-available">Available</span>
-                    </div>
-                </asp:Panel>
-            </div>
+            <!-- BOOKINGS LIST — filled by C# -->
+            <asp:Panel ID="pnlBookings" runat="server" />
 
         </div>
 
     </div>
 
 </form>
-
-<script>
-    function switchProfit(period, btn) {
-        document.querySelectorAll('.profit-tab').forEach(t => t.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('<%= hdnProfitPeriod.ClientID %>').value = period;
-        // Backend will handle actual value update via postback
-    }
-</script>
-
 </body>
 </html>

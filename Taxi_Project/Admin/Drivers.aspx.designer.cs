@@ -11,7 +11,7 @@ namespace Taxi_Project.Admin
 {
 
 
-    public partial class Dashboard
+    public partial class Drivers
     {
 
         /// <summary>
@@ -42,84 +42,138 @@ namespace Taxi_Project.Admin
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// lblTripsToday control.
+        /// btnAddDriver control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTripsToday;
+        protected global::System.Web.UI.WebControls.Button btnAddDriver;
 
         /// <summary>
-        /// btnTripsToday control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTripsToday;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// lblNewBookings control.
+        /// lblSuccess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNewBookings;
+        protected global::System.Web.UI.WebControls.Label lblSuccess;
 
         /// <summary>
-        /// btnNewBookings control.
+        /// btnFilterAll control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewBookings;
+        protected global::System.Web.UI.WebControls.Button btnFilterAll;
 
         /// <summary>
-        /// lblTotalCars control.
+        /// btnFilterAvailable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalCars;
+        protected global::System.Web.UI.WebControls.Button btnFilterAvailable;
 
         /// <summary>
-        /// btnTotalCars control.
+        /// btnFilterBusy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTotalCars;
+        protected global::System.Web.UI.WebControls.Button btnFilterBusy;
 
         /// <summary>
-        /// lblDriversRegistered control.
+        /// pnlDrivers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDriversRegistered;
+        protected global::System.Web.UI.WebControls.Panel pnlDrivers;
 
         /// <summary>
-        /// btnDriversRegistered control.
+        /// hdnEditDriverID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDriversRegistered;
+        protected global::System.Web.UI.WebControls.HiddenField hdnEditDriverID;
 
         /// <summary>
-        /// pnlBookings control.
+        /// hdnModalOpen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlBookings;
+        protected global::System.Web.UI.WebControls.HiddenField hdnModalOpen;
+
+        /// <summary>
+        /// lblModalTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblModalTitle;
+
+        /// <summary>
+        /// txtFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFullName;
+
+        /// <summary>
+        /// txtPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+
+        /// <summary>
+        /// ddlCar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCar;
+
+        /// <summary>
+        /// btnSaveDriver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveDriver;
+
+        /// <summary>
+        /// btnCancelModal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelModal;
     }
 }
