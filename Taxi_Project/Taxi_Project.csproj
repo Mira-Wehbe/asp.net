@@ -72,14 +72,11 @@
     <Content Include="Admin\Calendar.aspx" />
     <Content Include="Admin\Cars.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
-<<<<<<< HEAD
+     <Content Include="Admin\Drivers.aspx" />
     <Content Include="App_Data\Taxi_DB.mdf" />
     <Content Include="App_Data\Taxi_DB_log.ldf">
       <DependentUpon>Taxi_DB.mdf</DependentUpon>
     </Content>
-=======
-    <Content Include="Admin\Drivers.aspx" />
->>>>>>> 9b184986b10bd02c71b0e9a3d48d0da96e162853
     <Content Include="History.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="login.aspx" />
