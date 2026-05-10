@@ -247,6 +247,7 @@
                 <p class="panel-title">Book a <span>Ride</span></p>
                 <p class="panel-sub">Fill in the details below</p>
             </div>
+            <asp:Label ID="lblSelectedCar" runat="server" Style="font-size:12px; color:#F5C300;" />
 
             <!-- PICKUP -->
             <div class="field">
@@ -337,6 +338,7 @@
                 Text="Confirm Booking →"
                 CssClass="btn-submit"
                 OnClick="btnReserve_Click" />
+            <asp:Label ID="lblSuccess" runat="server" Visible="false" CssClass="success-box" />
 
             <!-- HIDDEN FIELDS -->
             <asp:HiddenField ID="hdnPickupLat"  runat="server" />
@@ -476,6 +478,7 @@
                 .catch(function () { box.style.display = 'none'; });
         }, 450);
     }
+    
 
     document.addEventListener('click', function (e) {
         if (!e.target.closest('.input-wrap')) {
@@ -483,6 +486,31 @@
             document.getElementById('dropoffSuggestions').style.display = 'none';
         }
     });
+
+    window.onload = function () {
+        var pickupLat = document.getElementById('<%= hdnPickupLat.ClientID %>').value;
+        var pickupLng = document.getElementById('<%= hdnPickupLng.ClientID %>').value;
+        var dropoffLat = document.getElementById('<%= hdnDropoffLat.ClientID %>').value;
+    var dropoffLng = document.getElementById('<%= hdnDropoffLng.ClientID %>').value;
+
+    if (pickupLat && pickupLng) {
+        placePickup(parseFloat(pickupLat), parseFloat(pickupLng),
+            document.getElementById('<%= txtPickup.ClientID %>').value);
+    }
+
+    if (dropoffLat && dropoffLng) {
+        placeDropoff(parseFloat(dropoffLat), parseFloat(dropoffLng),
+            document.getElementById('<%= txtDropoff.ClientID %>').value);
+        }
+
+        if (pickupLat && dropoffLat) {
+            drawRoute(
+                L.latLng(parseFloat(pickupLat), parseFloat(pickupLng)),
+                L.latLng(parseFloat(dropoffLat), parseFloat(dropoffLng))
+            );
+        }
+    };
 </script>
 </body>
 </html>
+

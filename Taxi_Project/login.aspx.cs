@@ -8,7 +8,7 @@ namespace Taxi_Project
     public partial class Login : Page
     {
 
-        private string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\miraw\OneDrive\Documents\Taxi_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
+        private string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\miraw\OneDrive\Documents\Taxi_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
         private SqlConnection GetConnection()
         {
             return new SqlConnection(cs);
@@ -57,6 +57,9 @@ namespace Taxi_Project
 
                     if (reader.Read())
                     {
+                        Session["UserID"] = reader["UserID"].ToString();
+                        Session["FullName"] = reader["FullName"].ToString();
+                        Session["Role"] = reader["Role"].ToString();
                         string role = reader["Role"].ToString();
 
                         Response.Write("<script>alert('Login Success')</script>");

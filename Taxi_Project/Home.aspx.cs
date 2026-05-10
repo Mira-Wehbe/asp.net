@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Taxi_Project
 {
@@ -11,12 +7,11 @@ namespace Taxi_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+            Response.Redirect("Login.aspx");
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -26,50 +21,52 @@ namespace Taxi_Project
 
         protected void btnStandard_Click(object sender, EventArgs e)
         {
-            Response.Write("CLICKED VAN");
-            if (Session["UserId"] != null)
+            if (Session["UserID"] != null)
             {
+                Session["SelectedCarType"] = "Standard"; 
                 Response.Redirect("Reserve.aspx");
             }
             else
             {
-                Response.Redirect("login.aspx");
+                Response.Redirect("Login.aspx");
             }
         }
 
         protected void btnBusiness_Click(object sender, EventArgs e)
         {
-            if (Session["UserId"] != null)
+            if (Session["UserID"] != null)
             {
+                Session["SelectedCarType"] = "Business";  
                 Response.Redirect("Reserve.aspx");
             }
             else
             {
-                Response.Redirect("login.aspx");
+                Response.Redirect("Login.aspx");
             }
         }
 
         protected void btnVan_Click(object sender, EventArgs e)
         {
-            if (Session["UserId"] != null)
+            if (Session["UserID"] != null)
             {
+                Session["SelectedCarType"] = "Van";      
                 Response.Redirect("Reserve.aspx");
             }
             else
             {
-                Response.Redirect("login.aspx");
+                Response.Redirect("Login.aspx");
             }
         }
 
         protected void btnMyTrips_Click(object sender, EventArgs e)
         {
-            if (Session["UserId"] != null)
+            if (Session["UserID"] != null)
             {
                 Response.Redirect("History.aspx");
             }
             else
             {
-                Response.Redirect("login.aspx");
+                Response.Redirect("Login.aspx");
             }
         }
     }

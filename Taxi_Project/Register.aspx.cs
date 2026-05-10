@@ -31,9 +31,7 @@ namespace Taxi_Project
             {
 
                 try
-                {
-
-
+                { 
                     if (string.IsNullOrWhiteSpace(txtFullName.Text))
                     {
 
@@ -55,15 +53,22 @@ namespace Taxi_Project
                         Response.Write("<script>alert('pass should be not emtpy ')</script>");
                         return;
                     }
+                    string password = txtPassword.Text;
 
-                    if (string.IsNullOrWhiteSpace(txtConfirmPassword.Text) || txtConfirmPassword.Text != txtPassword.Text)
+                    if (password.Length < 8 ||
+                        !System.Text.RegularExpressions.Regex.IsMatch(password, @"[A-Z]") ||
+                        !System.Text.RegularExpressions.Regex.IsMatch(password, @"[0-9]") ||
+                        !System.Text.RegularExpressions.Regex.IsMatch(password, @"[!@#$%^&*()_+\-=\[\]{}]"))
                     {
-                        Response.Write("<script>alert('confirm password is error ')</script>");
+                        Response.Write("<script>alert('Password must be at least 8 characters, contain one uppercase, one number, and one special character')</script>");
                         return;
                     }
 
-
-
+                    if (string.IsNullOrWhiteSpace(txtConfirmPassword.Text) || txtConfirmPassword.Text != password)
+                    {
+                        Response.Write("<script>alert('Passwords do not match')</script>");
+                        return;
+                    }
 
                     conn.Open();
                     SqlCommand cmd = conn.CreateCommand();
