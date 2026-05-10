@@ -16,32 +16,61 @@ namespace Taxi_Project
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("login.aspx");
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Register.aspx");
         }
 
         protected void btnStandard_Click(object sender, EventArgs e)
         {
-
+            Response.Write("CLICKED VAN");
+            if (Session["UserId"] != null)
+            {
+                Response.Redirect("Reserve.aspx");
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
         }
 
         protected void btnBusiness_Click(object sender, EventArgs e)
         {
-
+            if (Session["UserId"] != null)
+            {
+                Response.Redirect("Reserve.aspx");
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
         }
 
         protected void btnVan_Click(object sender, EventArgs e)
         {
-
+            if (Session["UserId"] != null)
+            {
+                Response.Redirect("Reserve.aspx");
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
         }
 
         protected void btnMyTrips_Click(object sender, EventArgs e)
         {
-
+            if (Session["UserId"] != null)
+            {
+                Response.Redirect("History.aspx");
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
         }
     }
 }
