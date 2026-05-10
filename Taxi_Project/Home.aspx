@@ -1,5 +1,4 @@
-﻿5
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Taxi_Project.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Taxi_Project.Home" %>
 
 <!DOCTYPE html>
 <html>

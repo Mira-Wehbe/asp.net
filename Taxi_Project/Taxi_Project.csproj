@@ -70,6 +70,10 @@
     <Content Include="Admin\AIInsights.aspx" />
     <Content Include="Admin\Calendar.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="App_Data\Taxi_DB.mdf" />
+    <Content Include="App_Data\Taxi_DB_log.ldf">
+      <DependentUpon>Taxi_DB.mdf</DependentUpon>
+    </Content>
     <Content Include="History.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="login.aspx" />
