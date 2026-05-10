@@ -11,7 +11,7 @@ namespace Taxi_Project
 {
 
 
-    public partial class Reserve
+    public partial class ReservePage
     {
 
         /// <summary>
@@ -22,6 +22,15 @@ namespace Taxi_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// btnMyTrips control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMyTrips;
 
         /// <summary>
         /// lblUserName control.
@@ -105,6 +114,15 @@ namespace Taxi_Project
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
+        /// btnCalculate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCalculate;
+
+        /// <summary>
         /// btnReserve control.
         /// </summary>
         /// <remarks>
@@ -157,5 +175,14 @@ namespace Taxi_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnDistance;
+
+        /// <summary>
+        /// hdnCarRate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnCarRate;
     }
 }
