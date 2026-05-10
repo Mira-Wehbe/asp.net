@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\miraw\\Downloads\\Taxi_Project1\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\Desktop\\I3332\\asp.net\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|c:\\users\\user\\onedrive\\desktop\\i3332\\asp.net\\taxi_project\\history.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{58A5990F-D012-4016-BC1D-FB78520D7412}|Taxi_Project\\Taxi_Project.csproj|solutionrelative:taxi_project\\history.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "History.aspx",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\Desktop\\I3332\\asp.net\\Taxi_Project\\History.aspx",
+              "RelativeDocumentMoniker": "Taxi_Project\\History.aspx",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\Desktop\\I3332\\asp.net\\Taxi_Project\\History.aspx",
+              "RelativeToolTip": "Taxi_Project\\History.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-05-10T20:06:41.066Z",
+              "EditorCaption": ""
             }
           ]
         }
