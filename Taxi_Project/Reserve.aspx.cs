@@ -115,6 +115,7 @@ namespace Taxi_Project
                 string.IsNullOrWhiteSpace(txtTime.Text))//malezm ykun time w date fayin
             {
                 lblError.Text = "Please choose a pickup date and time.";
+                lblError.Text = "Please choose a pickup date and time.";
                 lblError.Visible = true;
                 return;
             }
