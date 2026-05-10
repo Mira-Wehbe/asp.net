@@ -302,8 +302,6 @@
                 </div>
                 <div class="car-name">Yalla Standard</div>
                 <div class="car-info">
-                    <strong>Car Types:</strong> Hyundai Elantra 2024–2025,<br>
-                    Toyota Corolla, Kia Cerato<br>
                     <strong>Seats:</strong> 4 Passengers
                 </div>
                 <asp:Button ID="btnStandard"
@@ -320,8 +318,6 @@
                 </div>
                 <div class="car-name">Yalla Business Class</div>
                 <div class="car-info">
-                    <strong>Car Types:</strong> Kia K5,<br>
-                    Mercedes E200, BMW 3 Series & Similar<br>
                     <strong>Seats:</strong> 4 Passengers<br>
                     <strong>Unbranded Cars</strong>
                 </div>
@@ -339,8 +335,6 @@
                 </div>
                 <div class="car-name">Yalla Van</div>
                 <div class="car-info">
-                    <strong>Car Types:</strong> JAC M4,<br>
-                    Toyota Hiace, Hyundai H1<br>
                     <strong>Seats:</strong> 7 Passengers
                 </div>
                 <asp:Button ID="btnVan"
@@ -357,8 +351,6 @@
                 </div>
                 <div class="car-name">Yalla Standard</div>
                 <div class="car-info">
-                    <strong>Car Types:</strong> Hyundai Elantra 2024–2025,<br>
-                    Toyota Corolla, Kia Cerato<br>
                     <strong>Seats:</strong> 4 Passengers
                 </div>
                 <a href="Reserve.aspx?class=standard" class="car-book-btn">
