@@ -20,6 +20,7 @@ namespace Taxi_Project.Admin
 
         protected void btnAddDriver_Click(object sender, EventArgs e)
         {
+            Response.Redirect("DriverForm.aspx");
         }
 
         protected void btnFilter_Click(object sender, EventArgs e)

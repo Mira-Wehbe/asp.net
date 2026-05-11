@@ -101,3 +101,6 @@ CREATE TABLE [dbo].[Feedback]
 
 INSERT INTO Users (1, FullName, Email, PasswordHash, Role)
 VALUES ('Admin', 'admin@taxi.com', 'admin123', 'Admin');
+
+
+
