@@ -70,9 +70,16 @@
     <Content Include="Admin\AIInsights.aspx" />
     <Content Include="Admin\Bookings.aspx" />
     <Content Include="Admin\Calendar.aspx" />
+    <Content Include="Admin\CarForm.aspx" />
     <Content Include="Admin\Cars.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
-     <Content Include="Admin\Drivers.aspx" />
+    <Content Include="Admin\DayTrips.aspx" />
+    <Content Include="Admin\DriverForm.aspx" />
+    <Content Include="Admin\Drivers.aspx" />
+    <Content Include="Admin\EditBooking.aspx" />
+    <Content Include="Admin\EditCar.aspx" />
+    <Content Include="Admin\EditDriver.aspx" />
+    <Content Include="Admin\Profits.aspx" />
     <Content Include="App_Data\Taxi_DB.mdf" />
     <Content Include="App_Data\Taxi_DB_log.ldf">
       <DependentUpon>Taxi_DB.mdf</DependentUpon>
@@ -106,6 +113,13 @@
     <Compile Include="Admin\Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\CarForm.aspx.cs">
+      <DependentUpon>CarForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CarForm.aspx.designer.cs">
+      <DependentUpon>CarForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Cars.aspx.cs">
       <DependentUpon>Cars.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -120,12 +134,54 @@
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\DayTrips.aspx.cs">
+      <DependentUpon>DayTrips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DayTrips.aspx.designer.cs">
+      <DependentUpon>DayTrips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DriverForm.aspx.cs">
+      <DependentUpon>DriverForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DriverForm.aspx.designer.cs">
+      <DependentUpon>DriverForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Drivers.aspx.cs">
       <DependentUpon>Drivers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Drivers.aspx.designer.cs">
       <DependentUpon>Drivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditBooking.aspx.cs">
+      <DependentUpon>EditBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditBooking.aspx.designer.cs">
+      <DependentUpon>EditBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditCar.aspx.cs">
+      <DependentUpon>EditCar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditCar.aspx.designer.cs">
+      <DependentUpon>EditCar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditDriver.aspx.cs">
+      <DependentUpon>EditDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditDriver.aspx.designer.cs">
+      <DependentUpon>EditDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profits.aspx.cs">
+      <DependentUpon>Profits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Profits.aspx.designer.cs">
+      <DependentUpon>Profits.aspx</DependentUpon>
     </Compile>
     <Compile Include="History.aspx.cs">
       <DependentUpon>History.aspx</DependentUpon>

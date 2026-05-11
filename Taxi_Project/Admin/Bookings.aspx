@@ -60,7 +60,7 @@
         /* ── VIEW TABS (List / Calendar) ─────────────── */
         .view-tabs { display: flex; gap: 8px; margin-bottom: 1.2rem; }
         .view-tab {
-            height: 38px; padding: 0 18px;
+            height: 43px; padding: 0 28px;
             border-radius: 10px; font-size: 13px; font-weight: 600;
             font-family: 'Inter', sans-serif; cursor: pointer;
             border: 1.5px solid rgba(255,255,255,0.1);
@@ -174,6 +174,67 @@
         .btn-complete { background: transparent; border: 1px solid rgba(59,130,246,0.3); color: #60a5fa; }
         .btn-complete:hover { background: rgba(59,130,246,0.08); }
 
+        /* ── GRIDVIEW ────────────────────────────────── */
+        .bookings-grid {
+            width: 100%; border-collapse: collapse;
+            font-size: 13px; font-family: 'Inter', sans-serif;
+        }
+        .bookings-grid th {
+            background: #111; color: #555;
+            font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px;
+            padding: 12px 14px; text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .bookings-grid td {
+            padding: 14px; color: #ccc;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            vertical-align: middle;
+        }
+        .bookings-grid tr:hover td { background: rgba(245,195,0,0.04); }
+        .bookings-grid input[type="submit"] {
+            background: transparent;
+            border: 1px solid rgba(245,195,0,0.3);
+            color: #F5C300; border-radius: 7px;
+            padding: 5px 12px; font-size: 11px;
+            font-weight: 600; cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: background .2s;
+        }
+        .bookings-grid input[type="submit"]:hover {
+            background: rgba(245,195,0,0.08);
+        }
+        /* ── GRIDVIEW ────────────────────────────────── */
+        .bookings-grid {
+            width: 100%; border-collapse: collapse;
+            font-size: 13px; font-family: 'Inter', sans-serif;
+        }
+        .bookings-grid th {
+            background: #111; color: #555;
+            font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px;
+            padding: 12px 14px; text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .bookings-grid td {
+            padding: 14px; color: #ccc;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            vertical-align: middle;
+        }
+        .bookings-grid tr:hover td { background: rgba(245,195,0,0.04); }
+        .bookings-grid input[type="submit"] {
+            background: transparent;
+            border: 1px solid rgba(245,195,0,0.3);
+            color: #F5C300; border-radius: 7px;
+            padding: 5px 12px; font-size: 11px;
+            font-weight: 600; cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: background .2s;
+        }
+        .bookings-grid input[type="submit"]:hover {
+            background: rgba(245,195,0,0.08);
+        }
+
         /* ── CALENDAR VIEW ───────────────────────────── */
         .calendar-wrap {
             background: #1a1a1a;
@@ -241,10 +302,8 @@
         </div>
     </div>
 
-    <!-- MAIN -->
     <div class="main">
 
-        <!-- PAGE HEADER -->
         <div class="page-header">
             <div class="page-header-top">
                 <h1>All <span>Bookings</span></h1>
@@ -254,46 +313,46 @@
             </div>
         </div>
 
-        <!-- VIEW TABS: List / Calendar -->
         <div class="view-tabs">
             <asp:Button ID="btnViewList"     runat="server" Text="☰ List"     CssClass="view-tab active" OnClick="btnView_Click" CommandArgument="List"     CausesValidation="false" />
             <asp:Button ID="btnViewCalendar" runat="server" Text="📅 Calendar" CssClass="view-tab"        OnClick="btnView_Click" CommandArgument="Calendar" CausesValidation="false" />
         </div>
 
-        <!-- NEW BOOKING BUTTON -->
-        <asp:Button ID="btnNewBooking" runat="server" Text="+ New Booking"
-            CssClass="btn-new-booking" OnClick="btnNewBooking_Click" CausesValidation="false" />
-
-        <!-- ══ LIST VIEW ══════════════════════════════ -->
         <asp:Panel ID="pnlListView" runat="server" CssClass="view-panel shown">
 
-            <!-- STATUS FILTER TABS -->
-            <div class="status-tabs">
-                <asp:Button ID="btnAll"       runat="server" Text="All"       CssClass="status-tab active" OnClick="btnFilter_Click" CommandArgument="All"       CausesValidation="false" />
-                <asp:Button ID="btnPending"   runat="server" Text="Pending"   CssClass="status-tab"        OnClick="btnFilter_Click" CommandArgument="Pending"   CausesValidation="false" />
-                <asp:Button ID="btnActive"    runat="server" Text="Active"    CssClass="status-tab"        OnClick="btnFilter_Click" CommandArgument="Active"    CausesValidation="false" />
-                <asp:Button ID="btnCompleted" runat="server" Text="Completed" CssClass="status-tab"        OnClick="btnFilter_Click" CommandArgument="Completed" CausesValidation="false" />
-                <asp:Button ID="btnCancelled" runat="server" Text="Cancelled" CssClass="status-tab"        OnClick="btnFilter_Click" CommandArgument="Cancelled" CausesValidation="false" />
-            </div>
+           
 
             <!-- SEARCH -->
-            <div class="search-wrap">
+           <!--<div class="search-wrap">
                 <span class="search-icon">🔍</span>
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="search-input"
                     placeholder="Search by customer, car or ID..." />
                 <asp:Button ID="btnSearch" runat="server" Text="Search"
                     CssClass="btn-search" OnClick="btnSearch_Click" CausesValidation="false" />
-            </div>
-
-            <!-- BOOKINGS LIST — filled by C# -->
-            <div class="bookings-list">
-                <asp:Panel ID="pnlBookings" runat="server" />
-            </div>
+            </div>-->
+            <asp:GridView ID="gvBookings" runat="server"
+                AutoGenerateColumns="false"
+                DataKeyNames="TripID"
+                OnRowCommand="gvBookings_RowCommand"
+                CssClass="bookings-grid" CellPadding="12">
+                <Columns>
+                    <asp:BoundField DataField="TripID"          HeaderText="#" />
+                    <asp:BoundField DataField="Client"          HeaderText="Client" />
+                    <asp:BoundField DataField="Car"             HeaderText="Car" />
+                    <asp:BoundField DataField="Driver"          HeaderText="Driver" />
+                    <asp:BoundField DataField="PickupLocation"  HeaderText="Pickup" />
+                    <asp:BoundField DataField="DropoffLocation" HeaderText="Dropoff" />
+                    <asp:BoundField DataField="PickupTime"      HeaderText="Time" />
+                    <asp:BoundField DataField="DriverGender" HeaderText="Gender Pref" />
+                    <asp:BoundField DataField="Price"           HeaderText="Price" />
+                    <asp:BoundField DataField="Status"          HeaderText="Status" />
+                    <asp:ButtonField CommandName="EditTrip" Text="✏ Edit"
+                        ButtonType="Button" />
+                </Columns>
+            </asp:GridView>
 
         </asp:Panel>
-
-        <!-- ══ CALENDAR VIEW ══════════════════════════ -->
-        <asp:Panel ID="pnlCalendarView" runat="server" CssClass="view-panel">
+        <asp:Panel ID="pnlCalendarView" runat="server" CssClass="view-panel"/>
 
             <div class="calendar-wrap">
                 <div class="calendar-header">
@@ -305,8 +364,6 @@
                             OnClick="btnCalNav_Click" CommandArgument="next" CausesValidation="false" />
                     </div>
                 </div>
-
-                <!-- Day headers -->
                 <div class="calendar-grid">
                     <div class="cal-day-header">SUN</div>
                     <div class="cal-day-header">MON</div>
@@ -315,15 +372,9 @@
                     <div class="cal-day-header">THU</div>
                     <div class="cal-day-header">FRI</div>
                     <div class="cal-day-header">SAT</div>
-
-                    <!-- Calendar days — filled by C# -->
                     <asp:Panel ID="pnlCalendarDays" runat="server" />
                 </div>
             </div>
-
-        </asp:Panel>
-
-        <!-- HIDDEN FIELDS -->
         <asp:HiddenField ID="hdnView"          runat="server" Value="List" />
         <asp:HiddenField ID="hdnCalendarMonth" runat="server" Value="" />
         <asp:HiddenField ID="hdnFilter"        runat="server" Value="All" />

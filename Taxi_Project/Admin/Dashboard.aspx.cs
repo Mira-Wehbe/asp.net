@@ -20,7 +20,7 @@ namespace Taxi_Project.Admin
 
         protected void btnTripsToday_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Admin/Bookings.aspx");
+            Response.Redirect("~/Admin/Profits.aspx");
         }
 
         protected void btnNewBookings_Click(object sender, EventArgs e)
@@ -38,9 +38,6 @@ namespace Taxi_Project.Admin
             Response.Redirect("~/Admin/Drivers.aspx");
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-        }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {

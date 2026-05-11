@@ -11,7 +11,7 @@ namespace Taxi_Project.Admin
 {
 
 
-    public partial class Calendar
+    public partial class DayTrips
     {
 
         /// <summary>
@@ -42,6 +42,15 @@ namespace Taxi_Project.Admin
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
+        /// lblDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDate;
+
+        /// <summary>
         /// btnBack control.
         /// </summary>
         /// <remarks>
@@ -51,39 +60,12 @@ namespace Taxi_Project.Admin
         protected global::System.Web.UI.WebControls.Button btnBack;
 
         /// <summary>
-        /// calTrips control.
+        /// gvTrips control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calTrips;
-
-        /// <summary>
-        /// pnlTrips control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTrips;
-
-        /// <summary>
-        /// lblSelectedDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectedDate;
-
-        /// <summary>
-        /// pnlTripsList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTripsList;
+        protected global::System.Web.UI.WebControls.GridView gvTrips;
     }
 }

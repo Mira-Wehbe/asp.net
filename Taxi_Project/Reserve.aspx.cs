@@ -9,7 +9,7 @@ namespace Taxi_Project
 {
     public partial class ReservePage : System.Web.UI.Page
     {
-        private string ConnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\OneDrive\Desktop\I3332\asp.net\Taxi_Project\App_Data\Taxi_DB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
+        private string ConnStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\miraw\OneDrive\Documents\Taxi_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
         private SqlConnection GetConnection()
         {
@@ -115,7 +115,6 @@ namespace Taxi_Project
                 string.IsNullOrWhiteSpace(txtTime.Text))//malezm ykun time w date fayin
             {
                 lblError.Text = "Please choose a pickup date and time.";
-                lblError.Text = "Please choose a pickup date and time.";
                 lblError.Visible = true;
                 return;
             }
@@ -176,13 +175,15 @@ namespace Taxi_Project
                 {
                     con.Open();
                     string sql = @"
-                        INSERT INTO Trips
-                            (ClientID, CarID, PickupLocation, DropoffLocation, PickupTime, Price, Status, DistanceKm)
-                        VALUES
-                            (@ClientID, @CarID, @Pickup, @Dropoff, @PickupTime, @Price, 'Pending', @DistanceKm)";
-                          
+                            INSERT INTO Trips
+                                (ClientID, CarID, PickupLocation, DropoffLocation, 
+                                 PickupTime, Price, Status, DistanceKm, DriverGender)
+                            VALUES
+                                (@ClientID, @CarID, @Pickup, @Dropoff, 
+                                 @PickupTime, @Price, 'Pending', @DistanceKm, @DriverGender)";
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
+                        cmd.Parameters.AddWithValue("@DriverGender", ddlDriverGender.SelectedValue);
                         cmd.Parameters.AddWithValue("@ClientID", clientID);
                         cmd.Parameters.AddWithValue("@CarID", carID);
                         cmd.Parameters.AddWithValue("@Pickup", txtPickup.Text.Trim());

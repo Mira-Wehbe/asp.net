@@ -8,7 +8,7 @@ namespace Taxi_Project
     public partial class Login : Page
     {
 
-        private string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\OneDrive\Desktop\I3332\asp.net\Taxi_Project\App_Data\Taxi_DB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
+        private string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\miraw\OneDrive\Documents\Taxi_db.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
         private SqlConnection GetConnection()
         {
             return new SqlConnection(cs);
@@ -22,7 +22,7 @@ namespace Taxi_Project
             Response.Redirect("Register.aspx");
         }
 
-        protected void btnLogin_Click(object sender, EventArgs e)
+        /*protected void btnLogin_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = GetConnection())
             {
@@ -61,13 +61,12 @@ namespace Taxi_Project
                         Session["FullName"] = reader["FullName"].ToString();
                         Session["Role"] = reader["Role"].ToString();
                         string role = reader["Role"].ToString();
-
-                        Response.Write("<script>alert('Login Success')</script>");
+                        reader.Close();
 
                         // 3. redirect based on role
                         if (role == "Admin")
                         {
-                            Response.Redirect("Register.aspx");
+                            Response.Redirect("~/Admin/Dashboard.aspx");
                         }
                         else if (role == "Client")
                         {
@@ -84,6 +83,37 @@ namespace Taxi_Project
                 catch (Exception ex)
                 {
                     Response.Write("<script>alert('" + ex.Message + "')</script>");
+                }
+            }
+        }*/
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT UserID, FullName, Role FROM Users WHERE Email=@Email AND PasswordHash=@Password";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Email", txtPhone.Text.Trim());
+                cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Session["UserID"] = reader["UserID"].ToString();
+                    Session["FullName"] = reader["FullName"].ToString();
+                    Session["Role"] = reader["Role"].ToString();
+                    string role = reader["Role"].ToString();
+                    reader.Close();
+
+                    if (role == "Admin")
+                        Response.Redirect("~/Admin/Dashboard.aspx");
+                    else
+                        Response.Redirect("~/Home.aspx");
+                }
+                else
+                {
+                    reader.Close();
+                    Response.Write("<script>alert('Not found - Email: " + txtPhone.Text.Trim() + "')</script>");
                 }
             }
         }

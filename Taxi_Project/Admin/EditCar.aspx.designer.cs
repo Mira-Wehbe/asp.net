@@ -11,7 +11,7 @@ namespace Taxi_Project.Admin
 {
 
 
-    public partial class Calendar
+    public partial class EditCar
     {
 
         /// <summary>
@@ -24,66 +24,57 @@ namespace Taxi_Project.Admin
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblAdminName control.
+        /// txtPlateNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAdminName;
+        protected global::System.Web.UI.WebControls.TextBox txtPlateNumber;
 
         /// <summary>
-        /// btnLogout control.
+        /// txtModel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogout;
+        protected global::System.Web.UI.WebControls.TextBox txtModel;
 
         /// <summary>
-        /// btnBack control.
+        /// ddlCarType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCarType;
 
         /// <summary>
-        /// calTrips control.
+        /// txtRatePerKm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calTrips;
+        protected global::System.Web.UI.WebControls.TextBox txtRatePerKm;
 
         /// <summary>
-        /// pnlTrips control.
+        /// chkIsActive control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTrips;
+        protected global::System.Web.UI.WebControls.CheckBox chkIsActive;
 
         /// <summary>
-        /// lblSelectedDate control.
+        /// btnSaveCar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectedDate;
-
-        /// <summary>
-        /// pnlTripsList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTripsList;
+        protected global::System.Web.UI.WebControls.Button btnSaveCar;
     }
 }

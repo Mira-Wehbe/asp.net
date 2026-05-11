@@ -8,7 +8,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { height: 100%; }
-        body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #fff; display: flex; }
+        body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #fff; }
 
         /* ── SIDEBAR ─────────────────────────────────── */
         .sidebar {
@@ -39,29 +39,43 @@
         .btn-logout { width: 100%; height: 40px; background: transparent; border: 1px solid rgba(245,195,0,0.2); color: #F5C300; border-radius: 10px; font-size: 13px; cursor: pointer; font-family: 'Inter', sans-serif; }
 
         /* ── MAIN ────────────────────────────────────── */
-        .main { margin-left: 240px; flex: 1; padding: 2.5rem; min-height: 100vh; overflow-y: auto; }
+        .main { margin-left: 240px; padding: 2.5rem; min-height: 100vh; overflow-y: auto;min-width: 0; }
         .page-header { margin-bottom: 2rem; }
         .page-header h1 { font-size: 26px; font-weight: 700; }
         .page-header h1 span { color: #F5C300; }
         .page-header p { font-size: 14px; color: #555; margin-top: 4px; }
 
         /* ── STAT CARDS ──────────────────────────────── */
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+        .stats-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 1.5rem; 
+            margin-bottom: 2.5rem;
+            max-width: 900px;
+            
+        }
         .stat-card {
             background: #1a1a1a;
             border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 16px; padding: 1.5rem;
+            border-radius: 16px; 
+            padding: 1.8rem 2rem;  /* ← bigger padding */
             display: flex; flex-direction: column; gap: 12px;
             transition: border-color 0.2s;
+            min-height: 220px;  /* ← add minimum height */
         }
+       
         .stat-card:hover { border-color: rgba(245,195,0,0.3); }
         .stat-card.yellow { border-left: 3px solid #F5C300; }
         .stat-card.blue   { border-left: 3px solid #60a5fa; }
         .stat-card.green  { border-left: 3px solid #4ade80; }
         .stat-card.red    { border-left: 3px solid #f87171; }
-        .stat-icon  { font-size: 22px; }
+        .stat-icon  { font-size: 33px; }
         .stat-label { font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
-        .stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: #fff; letter-spacing: 1px; line-height: 1; }
+        .stat-value { 
+            font-family: 'Bebas Neue', sans-serif; 
+            font-size: 54px;  /* ← bigger number */
+            color: #fff; letter-spacing: 1px; line-height: 1; 
+         }
         .stat-btn {
             background: none; border: none; color: #555;
             font-size: 12px; font-family: 'Inter', sans-serif;
@@ -172,8 +186,8 @@
             <!-- TRIPS TODAY → Bookings.aspx -->
             <div class="stat-card yellow">
                 <span class="stat-icon">🚕</span>
-                <div class="stat-label">Trips Today</div>
-                <div class="stat-value"><asp:Label ID="lblTripsToday" runat="server" Text="0" /></div>
+                <div class="stat-label">Profit</div>
+                <div class="stat-value"><asp:Label ID="lblTripsToday" runat="server" Text="" /></div>
                 <asp:Button ID="btnTripsToday" runat="server" Text="Click to view →"
                     CssClass="stat-btn" OnClick="btnTripsToday_Click" CausesValidation="false" />
             </div>
@@ -182,7 +196,7 @@
             <div class="stat-card blue">
                 <span class="stat-icon">📋</span>
                 <div class="stat-label">New Bookings</div>
-                <div class="stat-value"><asp:Label ID="lblNewBookings" runat="server" Text="0" /></div>
+                <div class="stat-value"><asp:Label ID="lblNewBookings" runat="server" Text="" /></div>
                 <asp:Button ID="btnNewBookings" runat="server" Text="More info →"
                     CssClass="stat-btn" OnClick="btnNewBookings_Click" CausesValidation="false" />
             </div>
@@ -191,7 +205,7 @@
             <div class="stat-card green">
                 <span class="stat-icon">🚗</span>
                 <div class="stat-label">Total Cars</div>
-                <div class="stat-value"><asp:Label ID="lblTotalCars" runat="server" Text="0" /></div>
+                <div class="stat-value"><asp:Label ID="lblTotalCars" runat="server" Text="" /></div>
                 <asp:Button ID="btnTotalCars" runat="server" Text="More info →"
                     CssClass="stat-btn" OnClick="btnTotalCars_Click" CausesValidation="false" />
             </div>
@@ -200,18 +214,15 @@
             <div class="stat-card red">
                 <span class="stat-icon">👨‍✈️</span>
                 <div class="stat-label">Drivers Registered</div>
-                <div class="stat-value"><asp:Label ID="lblDriversRegistered" runat="server" Text="0" /></div>
+                <div class="stat-value"><asp:Label ID="lblDriversRegistered" runat="server" Text="" /></div>
                 <asp:Button ID="btnDriversRegistered" runat="server" Text="More info →"
                     CssClass="stat-btn" OnClick="btnDriversRegistered_Click" CausesValidation="false" />
             </div>
 
         </div>
 
-       
-
             <!-- BOOKINGS LIST — filled by C# -->
             <asp:Panel ID="pnlBookings" runat="server" />
-
         </div>
 
     </div>

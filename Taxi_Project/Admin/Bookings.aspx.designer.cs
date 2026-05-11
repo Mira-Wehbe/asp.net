@@ -60,15 +60,6 @@ namespace Taxi_Project.Admin
         protected global::System.Web.UI.WebControls.Button btnViewCalendar;
 
         /// <summary>
-        /// btnNewBooking control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewBooking;
-
-        /// <summary>
         /// pnlListView control.
         /// </summary>
         /// <remarks>
@@ -76,51 +67,6 @@ namespace Taxi_Project.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlListView;
-
-        /// <summary>
-        /// btnAll control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAll;
-
-        /// <summary>
-        /// btnPending control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPending;
-
-        /// <summary>
-        /// btnActive control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActive;
-
-        /// <summary>
-        /// btnCompleted control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCompleted;
-
-        /// <summary>
-        /// btnCancelled control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelled;
 
         /// <summary>
         /// txtSearch control.
@@ -141,13 +87,13 @@ namespace Taxi_Project.Admin
         protected global::System.Web.UI.WebControls.Button btnSearch;
 
         /// <summary>
-        /// pnlBookings control.
+        /// gvBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlBookings;
+        protected global::System.Web.UI.WebControls.GridView gvBookings;
 
         /// <summary>
         /// pnlCalendarView control.

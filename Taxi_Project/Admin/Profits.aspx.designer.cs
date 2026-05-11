@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Taxi_Project
+namespace Taxi_Project.Admin
 {
 
 
-    public partial class History
+    public partial class Profit
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace Taxi_Project
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lnkReserve control.
+        /// lblAdminName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkReserve;
+        protected global::System.Web.UI.WebControls.Label lblAdminName;
 
         /// <summary>
         /// btnLogout control.
@@ -42,84 +42,102 @@ namespace Taxi_Project
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// btnAll control.
+        /// btnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAll;
+        protected global::System.Web.UI.WebControls.Button btnBack;
 
         /// <summary>
-        /// btnPending control.
+        /// lblToday control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPending;
+        protected global::System.Web.UI.WebControls.Label lblToday;
 
         /// <summary>
-        /// btnActive control.
+        /// lblWeek control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActive;
+        protected global::System.Web.UI.WebControls.Label lblWeek;
 
         /// <summary>
-        /// btnCompleted control.
+        /// lblMonth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCompleted;
+        protected global::System.Web.UI.WebControls.Label lblMonth;
 
         /// <summary>
-        /// pnlTrips control.
+        /// lblAllTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTrips;
+        protected global::System.Web.UI.WebControls.Label lblAllTime;
 
         /// <summary>
-        /// txtComment control.
+        /// lblStandardTrips control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComment;
+        protected global::System.Web.UI.WebControls.Label lblStandardTrips;
 
         /// <summary>
-        /// hdnRating control.
+        /// lblStandardProfit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnRating;
+        protected global::System.Web.UI.WebControls.Label lblStandardProfit;
 
         /// <summary>
-        /// hdnTripID control.
+        /// lblBusinessTrips control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnTripID;
+        protected global::System.Web.UI.WebControls.Label lblBusinessTrips;
 
         /// <summary>
-        /// btnSubmitFeedback control.
+        /// lblBusinessProfit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitFeedback;
+        protected global::System.Web.UI.WebControls.Label lblBusinessProfit;
+
+        /// <summary>
+        /// lblVanTrips control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVanTrips;
+
+        /// <summary>
+        /// lblVanProfit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVanProfit;
     }
 }
